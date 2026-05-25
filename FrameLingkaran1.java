@@ -17,13 +17,13 @@ public class FrameLingkaran1 extends javax.swing.JFrame {
      */
     public FrameLingkaran1() { //contructor (method yang dijalankan di awal)
         initComponents();
+        //getContentPane().setBackground(new java.awt.Color(30,42,56));
         reset();
     }
     
     //method reset 
         void reset(){
-            TJari2.setText(null);
-            
+            TJari2.setText(null);   
             TLuas.setText(null);
         }
     /**
@@ -48,8 +48,9 @@ public class FrameLingkaran1 extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Frame Segitiga");
 
+        jLabel1.setFont(new java.awt.Font("Lucida Calligraphy", 1, 12)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("SEGITIGA");
+        jLabel1.setText("LINGKARAN");
 
         BtnKembali.setText("Kembali");
         BtnKembali.addActionListener(this::BtnKembaliActionPerformed);
@@ -141,7 +142,7 @@ public class FrameLingkaran1 extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BtnHitung)
                     .addComponent(Btnreset))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(BtnKembali)
@@ -153,8 +154,8 @@ public class FrameLingkaran1 extends javax.swing.JFrame {
 
     private void BtnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnKembaliActionPerformed
         // TODO add your handling code here:
-        //dispose(); membuka frame segitiga, menutup frame beranda
-        new Beranda(). setVisible(true);//berarti , jika saat button kembali di klik , membuka frame beranda 
+        dispose(); //menutup frame
+        //new Beranda(). setVisible(true);//berarti , jika saat button kembali di klik , membuka frame beranda 
         //System.exit(0);//bener bener menutup aplikasinya atau semua frame
     }//GEN-LAST:event_BtnKembaliActionPerformed
 
@@ -165,7 +166,7 @@ public class FrameLingkaran1 extends javax.swing.JFrame {
     private void BtnHitungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnHitungActionPerformed
         // TODO add your handling code here:
         double jari2 = Double.parseDouble(TJari2.getText()) ;//inputan string diganti menjadi ke double
-         double luas = 3.14 *jari2;
+         double luas = 3.14 *jari2*jari2;
          TLuas.setText(String.valueOf(luas));
     }//GEN-LAST:event_BtnHitungActionPerformed
 

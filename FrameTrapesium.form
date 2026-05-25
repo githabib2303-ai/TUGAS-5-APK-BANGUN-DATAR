@@ -32,7 +32,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace min="0" pref="433" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="461" max="32767" attributes="0"/>
                               <Component id="BtnKembali" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
@@ -78,7 +78,7 @@
           <Font name="Lucida Calligraphy" size="12" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="SEGITIGA"/>
+        <Property name="text" type="java.lang.String" value="TRAPESIUM"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="BtnKembali">
@@ -103,14 +103,16 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="LTinggi" min="-2" max="-2" attributes="0"/>
-                      <Component id="LAlas" min="-2" pref="37" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                      <Component id="LTinggi" max="32767" attributes="0"/>
+                      <Component id="jLabel2" alignment="1" max="32767" attributes="0"/>
+                      <Component id="LAlas" alignment="1" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="TAlas" max="32767" attributes="0"/>
-                      <Component id="TTinggi" pref="387" max="32767" attributes="0"/>
+                      <Component id="TSisiatas" max="32767" attributes="0"/>
+                      <Component id="TSisibawah" pref="387" max="32767" attributes="0"/>
+                      <Component id="TTinggi" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -122,14 +124,19 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="LAlas" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="TAlas" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="TSisiatas" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="26" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="TSisibawah" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="LTinggi" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="TTinggi" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="TTinggi" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="30" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -137,18 +144,28 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="LAlas">
           <Properties>
-            <Property name="text" type="java.lang.String" value="ALAS"/>
+            <Property name="text" type="java.lang.String" value="SISI ATAS"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="LTinggi">
           <Properties>
-            <Property name="text" type="java.lang.String" value="TINGGI"/>
+            <Property name="text" type="java.lang.String" value="SISI BAWAH"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="TAlas">
+        <Component class="javax.swing.JTextField" name="TSisiatas">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TAlasActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TSisiatasActionPerformed"/>
           </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="TSisibawah">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TSisibawahActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="TINGGI"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="TTinggi">
           <Events>

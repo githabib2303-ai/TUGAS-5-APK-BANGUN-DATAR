@@ -17,6 +17,8 @@ public class Beranda extends javax.swing.JFrame {
      */
     public Beranda() {
         initComponents();
+        //untuk merubah warna background
+        getContentPane().setBackground(new java.awt.Color(30,42,56));
     }
 
     /**
@@ -34,6 +36,10 @@ public class Beranda extends javax.swing.JFrame {
         BtnPersegi = new javax.swing.JButton();
         BtnLingkaran = new javax.swing.JButton();
         BtnExit = new javax.swing.JButton();
+        BtnJajarGenjang = new javax.swing.JButton();
+        BtnPersegiPanjang = new javax.swing.JButton();
+        BtnTrapesium = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -48,52 +54,105 @@ public class Beranda extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LUAS BANGUN DATAR");
+        setBackground(java.awt.Color.lightGray);
 
-        jLabel1.setFont(new java.awt.Font("Copperplate Gothic Bold", 0, 12)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(51, 51, 255));
+        jLabel1.setBackground(java.awt.Color.lightGray);
+        jLabel1.setFont(new java.awt.Font("Lucida Calligraphy", 1, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(153, 153, 153));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("APLIKASI BANGUN DATAR");
 
+        BtnSegitiga.setBackground(new java.awt.Color(0, 204, 204));
+        BtnSegitiga.setFont(new java.awt.Font("Book Antiqua", 1, 12)); // NOI18N
         BtnSegitiga.setText("SEGITIGA");
         BtnSegitiga.addActionListener(this::BtnSegitigaActionPerformed);
 
+        BtnPersegi.setBackground(new java.awt.Color(0, 204, 204));
+        BtnPersegi.setFont(new java.awt.Font("Book Antiqua", 1, 12)); // NOI18N
         BtnPersegi.setText("PERSEGI");
         BtnPersegi.addActionListener(this::BtnPersegiActionPerformed);
 
+        BtnLingkaran.setBackground(new java.awt.Color(0, 204, 204));
+        BtnLingkaran.setFont(new java.awt.Font("Book Antiqua", 1, 12)); // NOI18N
         BtnLingkaran.setText("LINGKARAN");
+        BtnLingkaran.addActionListener(this::BtnLingkaranActionPerformed);
 
+        BtnExit.setBackground(new java.awt.Color(255, 0, 0));
         BtnExit.setText("EXIT");
         BtnExit.addActionListener(this::BtnExitActionPerformed);
+
+        BtnJajarGenjang.setBackground(new java.awt.Color(0, 204, 204));
+        BtnJajarGenjang.setFont(new java.awt.Font("Book Antiqua", 1, 12)); // NOI18N
+        BtnJajarGenjang.setText("JAJAR GENJANG");
+        BtnJajarGenjang.addActionListener(this::BtnJajarGenjangActionPerformed);
+
+        BtnPersegiPanjang.setBackground(new java.awt.Color(0, 204, 204));
+        BtnPersegiPanjang.setFont(new java.awt.Font("Book Antiqua", 1, 12)); // NOI18N
+        BtnPersegiPanjang.setText("PERSEGI PANJANG");
+        BtnPersegiPanjang.addActionListener(this::BtnPersegiPanjangActionPerformed);
+
+        BtnTrapesium.setBackground(new java.awt.Color(0, 204, 204));
+        BtnTrapesium.setFont(new java.awt.Font("Book Antiqua", 1, 12)); // NOI18N
+        BtnTrapesium.setText("TRAPESIUM");
+        BtnTrapesium.addActionListener(this::BtnTrapesiumActionPerformed);
+
+        jLabel2.setFont(new java.awt.Font("Imprint MT Shadow", 0, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Silahkan pilih bangun datar yang ingin anda hitung luasnya :");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(BtnExit)
                 .addGap(15, 15, 15))
             .addGroup(layout.createSequentialGroup()
-                .addGap(134, 134, 134)
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(BtnSegitiga, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(BtnLingkaran, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(BtnPersegi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(171, Short.MAX_VALUE))
+                    .addComponent(BtnLingkaran, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(BtnPersegi, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(BtnPersegiPanjang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(BtnTrapesium, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(BtnJajarGenjang, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34))
+            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(48, 48, 48)
-                .addComponent(BtnSegitiga)
-                .addGap(34, 34, 34)
-                .addComponent(BtnPersegi)
-                .addGap(33, 33, 33)
-                .addComponent(BtnLingkaran)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(BtnPersegi)
+                            .addGap(33, 33, 33)
+                            .addComponent(BtnLingkaran))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(BtnSegitiga)
+                            .addGap(113, 113, 113)))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(BtnPersegiPanjang)
+                            .addGap(33, 33, 33)
+                            .addComponent(BtnTrapesium))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(BtnJajarGenjang)
+                            .addGap(113, 113, 113))))
+                .addGap(42, 42, 42)
                 .addComponent(BtnExit)
                 .addGap(14, 14, 14))
         );
@@ -123,6 +182,26 @@ public class Beranda extends javax.swing.JFrame {
         //dispose(); membuka frame segitiga, menutup frame beranda
     }//GEN-LAST:event_BtnPersegiActionPerformed
 
+    private void BtnJajarGenjangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnJajarGenjangActionPerformed
+        // TODO add your handling code here:
+         new FrameJajarGenjang().setVisible(true);
+    }//GEN-LAST:event_BtnJajarGenjangActionPerformed
+
+    private void BtnPersegiPanjangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnPersegiPanjangActionPerformed
+        // TODO add your handling code here:
+         new FramePersegiPanjang().setVisible(true);
+    }//GEN-LAST:event_BtnPersegiPanjangActionPerformed
+
+    private void BtnTrapesiumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnTrapesiumActionPerformed
+        // TODO add your handling code here:
+         new FrameTrapesium().setVisible(true);
+    }//GEN-LAST:event_BtnTrapesiumActionPerformed
+
+    private void BtnLingkaranActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnLingkaranActionPerformed
+        // TODO add your handling code here:
+         new FrameLingkaran1().setVisible(true); 
+    }//GEN-LAST:event_BtnLingkaranActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -150,10 +229,14 @@ public class Beranda extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnExit;
+    private javax.swing.JButton BtnJajarGenjang;
     private javax.swing.JButton BtnLingkaran;
     private javax.swing.JButton BtnPersegi;
+    private javax.swing.JButton BtnPersegiPanjang;
     private javax.swing.JButton BtnSegitiga;
+    private javax.swing.JButton BtnTrapesium;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

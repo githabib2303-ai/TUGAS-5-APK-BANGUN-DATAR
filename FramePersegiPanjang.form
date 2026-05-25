@@ -78,7 +78,7 @@
           <Font name="Lucida Calligraphy" size="12" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="SEGITIGA"/>
+        <Property name="text" type="java.lang.String" value="PERSEGI PANJANG"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="BtnKembali">
@@ -102,17 +102,17 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="LTinggi" min="-2" max="-2" attributes="0"/>
-                      <Component id="LAlas" min="-2" pref="37" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="LAlas" max="32767" attributes="0"/>
+                      <Component id="LTinggi" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="TAlas" max="32767" attributes="0"/>
-                      <Component id="TTinggi" pref="387" max="32767" attributes="0"/>
+                      <Component id="TPanjang" max="32767" attributes="0"/>
+                      <Component id="TLebar" pref="387" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="7" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -122,14 +122,14 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="LAlas" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="TAlas" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="TPanjang" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="26" max="32767" attributes="0"/>
+                  <EmptySpace pref="29" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="LTinggi" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="TTinggi" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="TLebar" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -137,22 +137,22 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="LAlas">
           <Properties>
-            <Property name="text" type="java.lang.String" value="ALAS"/>
+            <Property name="text" type="java.lang.String" value="PANJANG"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="LTinggi">
           <Properties>
-            <Property name="text" type="java.lang.String" value="TINGGI"/>
+            <Property name="text" type="java.lang.String" value="LEBAR"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="TAlas">
+        <Component class="javax.swing.JTextField" name="TPanjang">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TAlasActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TPanjangActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="TTinggi">
+        <Component class="javax.swing.JTextField" name="TLebar">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TTinggiActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TLebarActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

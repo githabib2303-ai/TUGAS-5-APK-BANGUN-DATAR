@@ -8,26 +8,25 @@ package bangundatar202557201017;
  *
  * @author acer
  */
-public class FramePersegi extends javax.swing.JFrame {
+public class FramePersegiPanjang extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FramePersegi.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FramePersegiPanjang.class.getName());
 
     /**
-     * Creates new form FramePersegi
+     * Creates new form FrameSegitiga
      */
-    public FramePersegi() {
+    public FramePersegiPanjang() { //contructor (method yang dijalankan di awal)
         initComponents();
         //getContentPane().setBackground(new java.awt.Color(30,42,56));
         reset();
     }
     
-    //method reset sebagai pengosong isi string di dalam kolom tabel
+    //method reset 
         void reset(){
-            TSisi1.setText(null);
+            TPanjang.setText(null);
+            TLebar.setText(null);
             TLuas.setText(null);
-        
-    }
-
+        }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -39,27 +38,68 @@ public class FramePersegi extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         BtnKembali = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        LAlas = new javax.swing.JLabel();
+        LTinggi = new javax.swing.JLabel();
+        TPanjang = new javax.swing.JTextField();
+        TLebar = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         TLuas = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        TSisi1 = new javax.swing.JTextField();
         BtnHitung = new javax.swing.JButton();
         Btnreset = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Frame Persegi");
+        setTitle("Frame Segitiga");
 
         jLabel1.setFont(new java.awt.Font("Lucida Calligraphy", 1, 12)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("PERSEGI");
+        jLabel1.setText("PERSEGI PANJANG");
 
         BtnKembali.setText("Kembali");
         BtnKembali.addActionListener(this::BtnKembaliActionPerformed);
 
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Input"));
+
+        LAlas.setText("PANJANG");
+
+        LTinggi.setText("LEBAR");
+
+        TPanjang.addActionListener(this::TPanjangActionPerformed);
+
+        TLebar.addActionListener(this::TLebarActionPerformed);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(LAlas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(LTinggi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(34, 34, 34)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(TPanjang)
+                    .addComponent(TLebar, javax.swing.GroupLayout.DEFAULT_SIZE, 387, Short.MAX_VALUE))
+                .addContainerGap(7, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LAlas)
+                    .addComponent(TPanjang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LTinggi)
+                    .addComponent(TLebar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(59, 59, 59))
+        );
+
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Output"));
 
-        TLuas.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        TLuas.setFont(new java.awt.Font("Lucida Sans", 1, 12)); // NOI18N
         TLuas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TLuas.setText("HITUNG");
 
@@ -72,34 +112,9 @@ public class FramePersegi extends javax.swing.JFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(TLuas, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(16, Short.MAX_VALUE))
-        );
-
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Input"));
-
-        jLabel2.setText("SISI 1");
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43)
-                .addComponent(TSisi1, javax.swing.GroupLayout.DEFAULT_SIZE, 353, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TSisi1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addGap(14, 14, 14)
+                .addComponent(TLuas)
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         BtnHitung.setText("HITUNG");
@@ -115,36 +130,36 @@ public class FramePersegi extends javax.swing.JFrame {
             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGap(0, 433, Short.MAX_VALUE)
                                 .addComponent(BtnKembali))
-                            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
-                .addGap(60, 60, 60)
+                .addGap(59, 59, 59)
                 .addComponent(BtnHitung)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Btnreset)
-                .addGap(55, 55, 55))
+                .addGap(101, 101, 101))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(21, 21, 21)
+                .addGap(17, 17, 17)
                 .addComponent(jLabel1)
-                .addGap(38, 38, 38)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(47, 47, 47)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Btnreset)
-                    .addComponent(BtnHitung))
-                .addGap(51, 51, 51)
+                    .addComponent(BtnHitung)
+                    .addComponent(Btnreset))
+                .addGap(33, 33, 33)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(BtnKembali)
                 .addContainerGap())
         );
@@ -154,20 +169,32 @@ public class FramePersegi extends javax.swing.JFrame {
 
     private void BtnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnKembaliActionPerformed
         // TODO add your handling code here:
+        //dispose(); membuka frame segitiga, menutup frame beranda
         dispose(); //menutup frame
-        //new Beranda(). setVisible(true);//berarti , jika saat button kembali di klik , membuka frame beranda
+        //new Beranda(). setVisible(true);//berarti , jika saat button kembali di klik , membuka frame beranda 
+        //System.exit(0);//bener bener menutup aplikasinya atau semua frame
     }//GEN-LAST:event_BtnKembaliActionPerformed
+
+    private void TPanjangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TPanjangActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TPanjangActionPerformed
 
     private void BtnHitungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnHitungActionPerformed
         // TODO add your handling code here:
-         double sisi = Double.parseDouble(TSisi1.getText()) ;//inputan string diganti menjadi ke double
-         
-         double luas = sisi*sisi;
+        double panjang = Double.parseDouble(TPanjang.getText()) ;//inputan string diganti menjadi ke double
+         double lebar = Double.parseDouble(TLebar.getText()) ;
+         double luas = panjang*lebar;
          TLuas.setText(String.valueOf(luas));
     }//GEN-LAST:event_BtnHitungActionPerformed
 
+    private void TLebarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TLebarActionPerformed
+        // TODO add your handling code here:
+       
+    }//GEN-LAST:event_TLebarActionPerformed
+
     private void BtnresetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnresetActionPerformed
         // TODO add your handling code here:
+        //code untuk mereset atau mengosongkan inputan
         reset();//memanggil method reset
     }//GEN-LAST:event_BtnresetActionPerformed
 
@@ -193,18 +220,20 @@ public class FramePersegi extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new FramePersegi().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new FramePersegiPanjang().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnHitung;
     private javax.swing.JButton BtnKembali;
     private javax.swing.JButton Btnreset;
+    private javax.swing.JLabel LAlas;
+    private javax.swing.JLabel LTinggi;
+    private javax.swing.JTextField TLebar;
     private javax.swing.JLabel TLuas;
-    private javax.swing.JTextField TSisi1;
+    private javax.swing.JTextField TPanjang;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables
 }
