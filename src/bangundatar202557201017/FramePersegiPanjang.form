@@ -74,6 +74,9 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Lucida Calligraphy" size="12" style="1"/>
+        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="PERSEGI PANJANG"/>
       </Properties>
@@ -121,7 +124,7 @@
                       <Component id="LAlas" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="TPanjang" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="30" max="32767" attributes="0"/>
+                  <EmptySpace pref="29" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="LTinggi" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="TLebar" alignment="3" min="-2" max="-2" attributes="0"/>

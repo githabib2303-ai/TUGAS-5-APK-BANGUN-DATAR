@@ -17,6 +17,7 @@ public class FramePersegi extends javax.swing.JFrame {
      */
     public FramePersegi() {
         initComponents();
+        //getContentPane().setBackground(new java.awt.Color(30,42,56));
         reset();
     }
     
@@ -49,6 +50,7 @@ public class FramePersegi extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Frame Persegi");
 
+        jLabel1.setFont(new java.awt.Font("Lucida Calligraphy", 1, 12)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("PERSEGI");
 
@@ -142,7 +144,7 @@ public class FramePersegi extends javax.swing.JFrame {
                     .addComponent(BtnHitung))
                 .addGap(51, 51, 51)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addComponent(BtnKembali)
                 .addContainerGap())
         );

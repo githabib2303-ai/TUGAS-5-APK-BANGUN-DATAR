@@ -17,6 +17,7 @@ public class FrameTrapesium extends javax.swing.JFrame {
      */
     public FrameTrapesium() { //contructor (method yang dijalankan di awal)
         initComponents();
+        //getContentPane().setBackground(new java.awt.Color(30,42,56));
         reset();
     }
     
@@ -53,6 +54,7 @@ public class FrameTrapesium extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Frame Segitiga");
 
+        jLabel1.setFont(new java.awt.Font("Lucida Calligraphy", 1, 12)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("TRAPESIUM");
 
@@ -105,7 +107,7 @@ public class FrameTrapesium extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(TTinggi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Output"));
